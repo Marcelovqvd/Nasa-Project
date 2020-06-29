@@ -1,9 +1,17 @@
 import React from 'react';
 
-import { Title } from './style';
+import logoImg from '../../assets/logo.svg';
+import { Title, Logo } from './style';
 
 const Home: React.FC = () => {
-  return <Title>Home</Title>;
+  return (
+    <>
+      <Logo>
+        <img src={logoImg} alt="nasa" />
+      </Logo>
+      <Title>Home</Title>
+    </>
+  );
 }
 
 export default Home;
