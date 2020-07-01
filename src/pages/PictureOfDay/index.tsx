@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 interface PictureOfDay {
@@ -37,7 +36,6 @@ const PictureOfDay: React.FC = () => {
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           ></iframe>
           <p>&copy; {pictureOfDay.copyright}</p>
-          <Link to="home">Back to Home</Link>
         </>
       )}
     </>
