@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+
 export const Title = styled.h1`
   font-size: 48px;
   color: #3a3a3a;
   margin-top: 80px;
 `;
 
-export const Pod = styled(Link)`
+export const Logo = styled(Link)`
 display: flex;
   justify-content: space-between;
   align-items: center;

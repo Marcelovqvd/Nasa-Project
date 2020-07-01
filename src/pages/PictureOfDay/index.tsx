@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
 interface PictureOfDay {
@@ -7,6 +8,9 @@ interface PictureOfDay {
   url: string,
   explanation: string,
   hdurl: string,
+  frameborder: string,
+  date: string,
+  copyright: string,
 }
 
 const PictureOfDay: React.FC = () => {
@@ -24,9 +28,16 @@ const PictureOfDay: React.FC = () => {
       {pictureOfDay && (
         <>
           <p>{pictureOfDay.title}</p>
-          <a>Link: {pictureOfDay.url}</a>
+          <p>{pictureOfDay.date}</p>
           <p>Explanation: {pictureOfDay.explanation}</p>
-          <img src="https://api.nasa.gov/planetary/apod/static/default_apod_image.jpg" alt="image"/>
+          <iframe
+          width="960"
+          height="540"
+          src={pictureOfDay.url}
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+          <p>&copy; {pictureOfDay.copyright}</p>
+          <Link to="home">Back to Home</Link>
         </>
       )}
     </>
