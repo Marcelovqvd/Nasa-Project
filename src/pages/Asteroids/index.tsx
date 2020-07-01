@@ -31,7 +31,7 @@ const AsteroidsList: React.FC = () => {
       <ul>
         {asteroidsList.map(asteroid => (
           <li>Name: {asteroid.name}
-            <Link to={asteroid.links.self}>link</Link>
+            <Link to={`asteroid/${asteroid.links.self}`}>link</Link>
           </li>
         ))}
       </ul>
