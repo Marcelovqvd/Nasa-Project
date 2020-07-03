@@ -1,7 +1,14 @@
 import React from 'react';
+import { Title, Pod } from './style';
 
 const Home: React.FC = () => {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <Title>Welcome to the Nasa Project</Title>
+      <Pod to="pictureofday">Picture of the Day</Pod>
+      <Pod to="asteroids">Asteroids - NeoWs</Pod>
+    </>
+  );
 }
 
 export default Home;

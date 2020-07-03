@@ -2,12 +2,16 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
-import List from '../pages/List';
+import PictureOfDay from '../pages/PictureOfDay';
+import Asteroids from '../pages/Asteroids';
+import Asteroid from '../pages/Asteroid';
 
 const Routes: React.FC = () => (
   <Switch>
     <Route path="/" exact component={Home} />
-    <Route path="/list" component={List} />
+    <Route path="/pictureofday" component={PictureOfDay} />
+    <Route path="/asteroids" component={Asteroids} />
+    <Route path="/asteroid" component={Asteroid} />
   </Switch>
 )
 
