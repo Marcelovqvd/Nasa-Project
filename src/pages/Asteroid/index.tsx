@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import axios from 'axios';
+import { request } from 'https';
 
 interface AsteroidData {
   name: string,
@@ -18,18 +19,19 @@ interface AsteroidData {
 }
 
 const AsteroidData: React.FC = () => {
-
   const [asteroidData, setAsteroidData] = useState<AsteroidData | null>(null);
+  const id = window.location.pathname;
+  console.log('->', id)
 
   useEffect(() => {
-    axios.get('http://www.neowsapp.com/rest/v1/neo/2453100?api_key=ZpR70Yw9ZalOz6lHZEELjIhd4nFfv2q2g77IudBl').then(response => {
+    axios.get(`http://www.neowsapp.com/rest/v1/neo${id}?api_key=ZpR70Yw9ZalOz6lHZEELjIhd4nFfv2q2g77IudBl`).then(response => {
       setAsteroidData(response.data);
     })
   }, [])
 
   return (
     <>
-      {console.log(asteroidData)}
+      {/* {console.log(asteroidData)} */}
       <h1>Asteroid Data</h1>
         <p>Name:{asteroidData?.name}</p>
         <p>Magnitude: {asteroidData?.absolute_magnitude_h}</p>
