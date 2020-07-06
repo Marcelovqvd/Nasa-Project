@@ -29,12 +29,8 @@ const PictureOfDay: React.FC = () => {
           <p>{pictureOfDay.title}</p>
           <p>{pictureOfDay.date}</p>
           <p>Explanation: {pictureOfDay.explanation}</p>
-          <iframe
-          width="960"
-          height="540"
-          src={pictureOfDay.url}
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          ></iframe>
+          <img src={pictureOfDay.url} alt=""/>
+          <button><a href={pictureOfDay.url}>See here</a></button>
           <p>&copy; {pictureOfDay.copyright}</p>
         </>
       )}

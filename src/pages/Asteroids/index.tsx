@@ -24,10 +24,9 @@ const AsteroidsList: React.FC = () => {
     <>
       <h1>Asteroids</h1>
       <ul>
-        {console.log(asteroidsList)}
         {asteroidsList.map(asteroid => (
           <li key={asteroid.name}>Name: {asteroid.name}
-            <Link to={`${asteroid.id}`}>link</Link>
+            <Link to={`/asteroid/${asteroid.id}`}>link</Link>
           </li>
         ))}
       </ul>

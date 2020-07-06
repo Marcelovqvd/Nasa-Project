@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import axios from 'axios';
-import { request } from 'https';
 
 interface AsteroidData {
+  asteroidData: {};
+  id: string,
   name: string,
   absolute_magnitude_h: string,
   estimated_diameter: {
@@ -16,22 +16,27 @@ interface AsteroidData {
   is_potentially_hazardous_asteroid: boolean,
   is_sentry_object: boolean,
   nasa_jpl_url: string,
+  orbital_data: {
+    first_observation_date: string,
+  }
 }
 
 const AsteroidData: React.FC = () => {
   const [asteroidData, setAsteroidData] = useState<AsteroidData | null>(null);
-  const id = window.location.pathname;
-  console.log('->', id)
+  const asteroidId = window.location.pathname;
+  console.log('->', asteroidId)
+
+  //salvar o id no storage e resgatar aqui
 
   useEffect(() => {
-    axios.get(`http://www.neowsapp.com/rest/v1/neo${id}?api_key=ZpR70Yw9ZalOz6lHZEELjIhd4nFfv2q2g77IudBl`).then(response => {
+    axios.get(`http://www.neowsapp.com/rest/v1/neo/${2021277}?api_key=ZpR70Yw9ZalOz6lHZEELjIhd4nFfv2q2g77IudBl`).then(response => {
       setAsteroidData(response.data);
     })
   }, [])
 
   return (
     <>
-      {/* {console.log(asteroidData)} */}
+    {/* {console.log(asteroidData)} */}
       <h1>Asteroid Data</h1>
         <p>Name:{asteroidData?.name}</p>
         <p>Magnitude: {asteroidData?.absolute_magnitude_h}</p>
@@ -64,6 +69,7 @@ const AsteroidData: React.FC = () => {
 
           </li>
         </ul>
+        <p>first_observation_date: {asteroidData?.orbital_data.first_observation_date}</p>
     </>
   );
 }
