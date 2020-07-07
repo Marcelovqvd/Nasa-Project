@@ -30,7 +30,7 @@ const AsteroidData: React.FC = () => {
   useEffect(() => {
     axios
       .get(
-        `http://www.neowsapp.com/rest/v1/neo/${123}?api_key=ZpR70Yw9ZalOz6lHZEELjIhd4nFfv2q2g77IudBl`,
+        `http://www.neowsapp.com/rest/v1/neo/${asteroidID}?api_key=ZpR70Yw9ZalOz6lHZEELjIhd4nFfv2q2g77IudBl`,
       )
       .then(response => {
         setAsteroidData(response.data);
