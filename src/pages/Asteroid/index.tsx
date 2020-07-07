@@ -24,35 +24,27 @@ interface AsteroidData {
 
 const AsteroidData: React.FC = () => {
   const [asteroidData, setAsteroidData] = useState<AsteroidData | null>(null);
-  const [errorLoading, setErrorLoading] = useState('');
   let asteroidId = window.location.pathname;
-  let asteroidUrlLength = asteroidId.length;
   let asteroidID = asteroidId.slice(10, 17);
 
-  try {
-    useEffect(() => {
-      axios
-        .get(
-          `http://www.neowsapp.com/rest/v1/neo/${asteroidID}?api_key=ZpR70Yw9ZalOz6lHZEELjIhd4nFfv2q2g77IudBl`,
-        )
-        .then(response => {
-          setAsteroidData(response.data);
-        });
-    }, []);
-  } catch (err) {
-    setErrorLoading('Not Found');
-  }
+  useEffect(() => {
+    axios
+      .get(
+        `http://www.neowsapp.com/rest/v1/neo/${123}?api_key=ZpR70Yw9ZalOz6lHZEELjIhd4nFfv2q2g77IudBl`,
+      )
+      .then(response => {
+        setAsteroidData(response.data);
+      });
+  }, []);
 
   return (
     <Container>
       <Title>Asteroid Data</Title>
-
-      {errorLoading && <Error>{errorLoading}</Error>}
       <List>
         <li>
           <li>
             <strong>Name: </strong>
-            {asteroidData?.name}
+            {asteroidData?.name ? asteroidData?.name : 'Asteroid Not Found'}
           </li>
           <li>
             <strong>Magnitude: </strong>
