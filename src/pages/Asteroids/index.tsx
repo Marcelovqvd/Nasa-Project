@@ -6,6 +6,7 @@ import api from '../../services/api';
 
 interface AsteroidsList {
   name: string;
+  id: string;
   links: {
     self: string;
   };
@@ -23,16 +24,16 @@ const AsteroidsList: React.FC = () => {
         setAsteroidsList(response.data.near_earth_objects);
       });
   }, []);
-
+;
   return (
     <Container>
       <Title>Asteroids</Title>
       <List>
         {asteroidsList.map(asteroid => (
-          <li>
+          <li key={asteroid.id}>
             {' '}
             <strong>Name: {asteroid.name}</strong>
-            <SeeMore to={`asteroid/${asteroid.links.self}`}>See more</SeeMore>
+            <SeeMore to={`asteroid/${asteroid.id}`}>See more</SeeMore>
           </li>
         ))}
       </List>
