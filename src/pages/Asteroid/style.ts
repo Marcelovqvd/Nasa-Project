@@ -12,6 +12,11 @@ export const Container = styled.div`
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
 `;
 
+export const Error = styled.span`
+  font-size: 26px;
+  color: #3a3a3a;
+`;
+
 export const Title = styled.h1`
   text-transform: uppercase;
   text-align: center;
