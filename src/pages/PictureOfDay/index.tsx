@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Container, Title} from './style';
+import { Container, Title, Explanation} from './style';
 
 import api from '../../services/api';
 
@@ -30,7 +30,7 @@ const PictureOfDay: React.FC = () => {
         <>
           <strong>{pictureOfDay.title}</strong>
           <span>{pictureOfDay.date}</span>
-          <p>{pictureOfDay.explanation}</p>
+          <Explanation>{pictureOfDay.explanation}</Explanation>
           <img src={pictureOfDay.url} alt=""/>
           <a href={pictureOfDay.url}>Click for high definition</a>
           <p>&copy; {pictureOfDay.copyright}</p>

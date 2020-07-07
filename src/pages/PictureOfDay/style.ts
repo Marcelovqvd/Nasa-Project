@@ -47,3 +47,13 @@ export const Title = styled.h1`
   margin: 80px 0 10px 0;
 `;
 
+export const Explanation = styled.article`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 20px;
+  line-height: 32px;
+  max-width: 960px;
+`;
+
