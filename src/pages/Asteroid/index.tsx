@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { Container, Title, List} from './style';
+
 import axios from 'axios';
 
 interface AsteroidData {
@@ -35,42 +37,44 @@ const AsteroidData: React.FC = () => {
   }, [])
 
   return (
-    <>
-    {/* {console.log(asteroidData)} */}
-      <h1>Asteroid Data</h1>
-        <p>Name:{asteroidData?.name}</p>
-        <p>Magnitude: {asteroidData?.absolute_magnitude_h}</p>
-        <ul>
-          <li>Estimated diameters:
-            <p>max: {asteroidData?.estimated_diameter.kilometers.estimated_diameter_max} Kilometers</p>
-            <p>min: {asteroidData?.estimated_diameter.kilometers.estimated_diameter_min} Kilometers</p>
-            <p>
+    <Container>
+      <Title>Asteroid Data</Title>
+
+        <List>
+          <li>
+            <li><strong>Name: </strong>{asteroidData?.name}</li>
+            <li><strong>Magnitude: </strong>{asteroidData?.absolute_magnitude_h}</li>
+            <ul>
+              <strong>Estimated diameters:</strong>
+              <li><span>max:</span> {asteroidData?.estimated_diameter.kilometers.estimated_diameter_max} <span>Kilometers</span></li>
+              <li><span>min:</span> {asteroidData?.estimated_diameter.kilometers.estimated_diameter_min} <span>Kilometers</span></li>
+            </ul>
+            <li>
               {asteroidData?.is_potentially_hazardous_asteroid
               ?
-              'Potentially Hazardous'
+              <strong>Potentially Hazardous</strong>
               :
-              'Not potentailly Hazardous'
+              <strong>Not potentailly Hazardous</strong>
               }
-            </p>
-            <p>
+            </li>
+            <li>
               {
               asteroidData?.is_sentry_object
               ?
-              'Is sentry Object'
+              <strong>Is sentry Object</strong>
               :
-              'Not sentry Object'
+              <strong>Not sentry Object</strong>
               }
-            </p>
-            <p>
+            </li>
+            <li><strong>First observation date:</strong> {asteroidData?.orbital_data.first_observation_date}</li>
+            <li>
               <a href={`${asteroidData?.nasa_jpl_url}`}>
-                See it on Nasa Solar System Dynamics
+                See on Nasa Solar System Dynamics
               </a>
-            </p>
-
+            </li>
           </li>
-        </ul>
-        <p>first_observation_date: {asteroidData?.orbital_data.first_observation_date}</p>
-    </>
+        </List>
+    </Container>
   );
 }
 

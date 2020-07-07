@@ -9,6 +9,11 @@ export const Container = styled.div`
   border-radius: 10px;
   margin: 50px 0;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+
+  p {
+    font-size: 26px;
+    font-weight: bold;
+  }
 `;
 
 export const Title = styled.h1`
@@ -18,7 +23,7 @@ export const Title = styled.h1`
   margin: 80px 0 10px 0;
 `;
 
-export const Pod = styled(Link)`
+export const PicOfDay = styled(Link)`
   font-size: 34px;
   padding: 15px;
   border-radius: 10px;
