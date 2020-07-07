@@ -26,14 +26,14 @@ const AsteroidData: React.FC = () => {
   const [asteroidData, setAsteroidData] = useState<AsteroidData | null>(null);
   const [errorLoading, setErrorLoading] = useState('');
   let asteroidId = window.location.pathname;
-  let asteroidURlLength = asteroidId.length;
-  asteroidId = asteroidId.slice(10, 17);
+  let asteroidUrlLength = asteroidId.length;
+  let asteroidID = asteroidId.slice(10, 17);
 
   try {
     useEffect(() => {
       axios
         .get(
-          `http://www.neowsapp.com/rest/v1/neo/${asteroidId}?api_key=ZpR70Yw9ZalOz6lHZEELjIhd4nFfv2q2g77IudBl`,
+          `http://www.neowsapp.com/rest/v1/neo/${asteroidID}?api_key=ZpR70Yw9ZalOz6lHZEELjIhd4nFfv2q2g77IudBl`,
         )
         .then(response => {
           setAsteroidData(response.data);
