@@ -14,11 +14,9 @@ export const Logo = styled(Link)`
   margin: 50 0;
   text-decoration: none;
   transition: opacity 0.2s;
-
   &:hover {
     opacity: 0.7;
   }
-
   h1 {
     font-size: 38px;
     font-weight: bold;

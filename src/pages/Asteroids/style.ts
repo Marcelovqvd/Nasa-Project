@@ -26,7 +26,6 @@ export const Title = styled.h1`
 
 export const List = styled.ul`
   list-style: none;
-
   li {
     display: flex;
     justify-content: center;
@@ -36,7 +35,6 @@ export const List = styled.ul`
     border-radius: 10px;
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
-
     strong {
       font-size: 16px;
     }
@@ -53,7 +51,6 @@ export const SeeMore = styled(Link)`
   text-decoration: none;
   transition: opacity 0.2s;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
-
   &:hover {
     opacity: 0.7;
   }

@@ -7,7 +7,6 @@ export const Container = styled.div`
   align-items: center;
   border-radius: 10px;
   margin: 50px 0;
-
   a {
     font-size: 26px;
     padding: 15px;
@@ -18,22 +17,18 @@ export const Container = styled.div`
     text-decoration: none;
     transition: opacity 0.2s;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
-
     &:hover {
       opacity: 0.7;
     }
   }
-
   p {
     font-size: 20px;
     margin: 40px 0 20px 0;
   }
-
   strong {
     font-size: 24px;
     margin: 40px 0 20px 0;
   }
-
   span {
     font-size: 20px;
   }
@@ -56,4 +51,3 @@ export const Explanation = styled.article`
   line-height: 32px;
   max-width: 960px;
 `;
-

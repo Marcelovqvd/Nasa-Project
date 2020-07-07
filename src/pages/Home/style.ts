@@ -9,7 +9,6 @@ export const Container = styled.div`
   border-radius: 10px;
   margin: 50px 0;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
-
   p {
     font-size: 32px;
     font-weight: bold;
@@ -36,11 +35,9 @@ export const PicOfDay = styled(Link)`
   text-decoration: none;
   transition: opacity 0.2s;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
-
   &:hover {
     opacity: 0.7;
   }
-
   h1 {
     font-size: 38px;
     font-weight: bold;

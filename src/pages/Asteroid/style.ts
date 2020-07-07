@@ -31,32 +31,26 @@ export const List = styled.ul`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   li {
     margin: 20px 0;
     border-radius: 10px;
     padding: 10px;
-
     ul {
       margin: 5px 0 0 10px;
       li {
         margin: 5px 0 0 20px;
       }
     }
-
     p {
       font-size: 16px;
       margin: 10px 0;
     }
-
     strong {
       font-size: 16px;
     }
-
     span {
       font-size: 14px;
     }
-
     a {
       font-size: 26px;
       padding: 5px;
@@ -67,7 +61,6 @@ export const List = styled.ul`
       text-decoration: none;
       transition: opacity 0.2s;
       box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
-
       &:hover {
         opacity: 0.7;
       }
@@ -85,7 +78,6 @@ export const SeeMore = styled(Link)`
   text-decoration: none;
   transition: opacity 0.2s;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
-
   &:hover {
     opacity: 0.7;
   }
