@@ -1,13 +1,14 @@
 import React from 'react';
-import { Title, Pod } from './style';
+import { Container, Title, PicOfDay } from './style';
 
 const Home: React.FC = () => {
   return (
-    <>
+    <Container>
       <Title>Welcome to the Nasa Project</Title>
-      <Pod to="pictureofday">Picture of the Day</Pod>
-      <Pod to="asteroids">Asteroids - NeoWs</Pod>
-    </>
+      <PicOfDay to="/pictureofday">See the picture of the Day</PicOfDay>
+      <p>Are you interested in learning about asteroids?</p>
+      <PicOfDay to="/asteroids">Click here for more</PicOfDay>
+    </Container>
   );
 }
 

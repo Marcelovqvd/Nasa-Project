@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import { Container, Title, Explanation} from './style';
+
 import api from '../../services/api';
 
 interface PictureOfDay {
@@ -22,23 +24,19 @@ const PictureOfDay: React.FC = () => {
   }, [])
 
   return (
-    <>
-      <h1>Picture of the day</h1>
+    <Container>
+      <Title>Picture of the day</Title>
       {pictureOfDay && (
         <>
-          <p>{pictureOfDay.title}</p>
-          <p>{pictureOfDay.date}</p>
-          <p>Explanation: {pictureOfDay.explanation}</p>
-          <iframe
-          width="960"
-          height="540"
-          src={pictureOfDay.url}
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          ></iframe>
+          <strong>{pictureOfDay.title}</strong>
+          <span>{pictureOfDay.date}</span>
+          <Explanation>{pictureOfDay.explanation}</Explanation>
+          <img src={pictureOfDay.url} alt=""/>
+          <a href={pictureOfDay.url}>Click for high definition</a>
           <p>&copy; {pictureOfDay.copyright}</p>
         </>
       )}
-    </>
+    </Container>
   );
 }
 
