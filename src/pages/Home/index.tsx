@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Container, Title, PicOfDay } from './style';
 
@@ -11,6 +10,6 @@ const Home: React.FC = () => {
       <PicOfDay to="/asteroids">Click here for more</PicOfDay>
     </Container>
   );
-}
+};
 
 export default Home;
