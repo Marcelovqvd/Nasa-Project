@@ -9,19 +9,12 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #f0f0f5;
+    background: #ffffff;
     -webkit-font-smoothing: antialiased;
   }
 
   body, input, button {
     font: 16px Roboto, sans-serif;
-  }
-
-  #root {
-    max-width: 960px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 40px 20px;
   }
 
   button {
