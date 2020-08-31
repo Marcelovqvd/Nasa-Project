@@ -6,18 +6,27 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 40px;
+
   p {
-    font-size: 32px;
+    margin: 20px 0;
+    color: #14213d;
+    font-family: Roboto;
+    font-style: normal;
     font-weight: bold;
-    margin-top: 80px;
+    font-size: 24px;
+    line-height: 28px;
   }
 `;
 
 export const Title = styled.h1`
   text-align: center;
+  color: #14213d;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
   font-size: 48px;
-  color: #3a3a3a;
-  margin: 80px 0 10px 0;
+  line-height: 56px;
 `;
 
 export const PicOfDay = styled(Link)`
