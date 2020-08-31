@@ -20,3 +20,4 @@ Instale as dependências do projeto:
 Execute a aplicação:
 
     $ yarn start
+

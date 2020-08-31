@@ -24,7 +24,6 @@ const AsteroidsList: React.FC = () => {
         setAsteroidsList(response.data.near_earth_objects);
       });
   }, []);
-;
   return (
     <Container>
       <Title>Asteroids</Title>
