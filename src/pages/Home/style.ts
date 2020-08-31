@@ -6,9 +6,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border-radius: 10px;
-  margin: 50px 0;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
   p {
     font-size: 32px;
     font-weight: bold;
