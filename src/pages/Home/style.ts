@@ -2,42 +2,58 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+  max-width: 960px;
+`;
+
+export const ContainerContent = styled.div`
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  p {
-    font-size: 32px;
+
+  strong {
+    margin: 10px 0 10px 0;
+    max-width: 450px;
+    color: #14213d;
+    font-family: Roboto;
+    font-style: normal;
     font-weight: bold;
-    margin-top: 80px;
+    font-size: 24px;
+    line-height: 28px;
   }
 `;
 
 export const Title = styled.h1`
+  margin: 120px 0 40px 0;
   text-align: center;
+  color: #14213d;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
   font-size: 48px;
-  color: #3a3a3a;
-  margin: 80px 0 10px 0;
+  line-height: 56px;
 `;
 
-export const PicOfDay = styled(Link)`
-  font-size: 34px;
-  width: 500px;
-  margin: 50px 0;
-  padding: 5px;
+export const PODLink = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  background: #fca311;
+  height: 56px;
   border-radius: 10px;
-  background-color: #3a3a3a;
-  color: #f5f5f5;
-  text-align: center;
+  border: 0;
+  color: #000000;
+  width: 100%;
+  font-weight: bold;
+  margin-top: 16px;
+  transition: background-color 0.2s;
   text-decoration: none;
-  transition: opacity 0.2s;
-  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px;
+
   &:hover {
     opacity: 0.7;
-  }
-  h1 {
-    font-size: 38px;
-    font-weight: bold;
-    color: #3a3a3a;
   }
 `;
