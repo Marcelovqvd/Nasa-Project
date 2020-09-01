@@ -1,14 +1,18 @@
 import React from 'react';
-import { Container, Title, PicOfDay } from './style';
+import { Container, ContainerContent, Title, PODLink } from './style';
 
 const Home: React.FC = () => {
   return (
     <Container>
       <Title>Welcome to the Nasa Project</Title>
-      <p>Go further and see our picture of the day</p>
-      <PicOfDay to="/pictureofday">See the picture of the Day</PicOfDay>
-      <p>Are you interested in learning about asteroids?</p>
-      <PicOfDay to="/asteroids">Click here for more</PicOfDay>
+      <ContainerContent>
+        <strong>Go further and see our picture of the day</strong>
+        <PODLink to="/pictureofday">Picture of the Day</PODLink>
+      </ContainerContent>
+      <ContainerContent>
+        <strong>Are you interested in learning about asteroids?</strong>
+        <PODLink to="/asteroids">Asteroids</PODLink>
+      </ContainerContent>
     </Container>
   );
 };
